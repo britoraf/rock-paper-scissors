@@ -5,7 +5,7 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         playRound();
         }
-        return "The final score is... HUMAN: " + humanScore + " ChatGPT: " + computerScore + "."
+        return "The final score is... HUMAN: " + humanScore + " CHEATING COMPUTER: " + computerScore + "."
     }
 
     function playRound(humanChoice, computerChoice) {
@@ -29,7 +29,7 @@ function playGame() {
             const rock = "rock"
             const paper = "paper"
             const scissors = "scissors"
-            var choice = prompt("So? Rock, Paper or Scissors?").toLowerCase();
+            var choice = prompt("Choose one: Rock, Paper or Scissors?").toLowerCase();
             if (choice == "rock") {
                 return rock;
             }
@@ -39,20 +39,20 @@ function playGame() {
             else if (choice == "scissors") {
                 return scissors;
             } else {
-                console.log("You have to choose, dude.")
+                console.log("You have to choose, my boy.")
             }
         }
         if (humanChoice == "paper" && computerChoice == "rock" ||
             humanChoice == "scissors" && computerChoice == "paper" ||
             humanChoice == "rock" && computerChoice == "scissors") {
                 humanScore++;
-                console.log(`You win! ${humanChoice} destroys ${computerChoice}.`)
+                console.log(`HE HE BOY You win! ${humanChoice} destroys ${computerChoice}.`)
             }
         else if (humanChoice == "rock" && computerChoice == "paper" ||
                 humanChoice == "paper" && computerChoice == "scissors" ||
                 humanChoice == "scissors" && computerChoice == "rock") {
                 computerScore++;
-                console.log(`You lose! ${computerChoice} destroys ${humanChoice}.`)
+                console.log(`You lose, dude! Damn this game. ${computerChoice} destroys ${humanChoice}.`)
             }
         else {
                 console.log(`Tie.`)
